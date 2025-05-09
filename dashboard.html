@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Water Quality Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Water Quality Monitoring Dashboard</h1>
+        <div class="form-section">
+            <input type="number" step="any" id="ph" placeholder="pH">
+            <input type="number" step="any" id="hardness" placeholder="Hardness">
+            <input type="number" step="any" id="solids" placeholder="Solids">
+            <input type="number" step="any" id="chloramines" placeholder="Chloramines">
+            <input type="number" step="any" id="sulfate" placeholder="Sulfate">
+            <input type="number" step="any" id="organic_carbon" placeholder="Organic Carbon">
+            <input type="number" step="any" id="turbidity" placeholder="Turbidity">
+            <button id="predict-btn">Predict</button>
+        </div>
+        <div id="result-box" class="result-box"></div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
